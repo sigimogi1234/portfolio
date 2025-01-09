@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기도 온라인 정책연구도서관</title>
+    <link rel="stylesheet" href="css/resrt.css">
+    <link rel="stylesheet" href="css/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/service.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/lottie-player.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="gnbWrap">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="img/logoHeader.svg" alt="logo">
+                </a>
+            </h1>
+            <ul class="navPC">
+                <li><a href="#">정책분야</a></li>
+                <li><a href="#">기관</a></li>
+                <li><a href="#">타임 아카이브</a></li>
+                <li><a href="#">정책 동향</a></li>
+                <li><a href="service.html">서비스 소개</a></li>
+            </ul>
+            <button class="navBtnPC">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path
+                        d="M25 25L19.2667 19.2667M22.3333 11.6667C22.3333 17.5577 17.5577 22.3333 11.6667 22.3333C5.77563 22.3333 1 17.5577 1 11.6667C1 5.77563 5.77563 1 11.6667 1C17.5577 1 22.3333 5.77563 22.3333 11.6667Z"
+                        stroke="#111F30" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="navBtnM">
+                <div class="iconSearch">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <path
+                            d="M25 25L19.2667 19.2667M22.3333 11.6667C22.3333 17.5577 17.5577 22.3333 11.6667 22.3333C5.77563 22.3333 1 17.5577 1 11.6667C1 5.77563 5.77563 1 11.6667 1C17.5577 1 22.3333 5.77563 22.3333 11.6667Z"
+                            stroke="#111F30" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="iconMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div class="searchModal">
+            <div class="searchArea">
+                <p>#대중교통</p>
+                <p>#코로나</p>
+            </div>
+            <div class="recent">
+                <p class="recentTitle">최근 검색어</p>
+                <ul class="recentList">
+                    <li>
+                        <div class="txt">
+                            <img src="img/iconTime.svg" alt="">
+                            <p>경기도 온라인 정책</p>
+                        </div>
+                        <div class="close">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <img src="img/iconTime.svg" alt="">
+                            <p>경기도 온라인 정책 연구 도서관</p>
+                        </div>
+                        <div class="close">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menuModal">
+            <div class="dim"></div>
+            <ul class="menuModalList">
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>정책분야</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">경기도 온라인 정책</a></li>
+                        <li><a href="#">공공질서 및 안전</a></li>
+                        <li><a href="#">도청</a></li>
+                        <li><a href="#">문화체육관광</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>기관</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">도청</a></li>
+                        <li><a href="#">시/군</a></li>
+                        <li><a href="#">공공기관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>타임아카이브</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">연도별 기관</a></li>
+                        <li><a href="#">연도별 분야</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>정책 동향</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">최근정책</a></li>
+                        <li><a href="#">관심정책</a></li>
+                        <li><a href="#">주요시책</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>서비스 소개</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="service.html">서비스 소개</a></li>
+                        <li><a href="#">참여기관</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div data-aos="fade-up" class="visual">
+        <div class="visualCon">
+            <div class="visualTitle">
+                <div class="titleWrap">
+                    <div class="line"></div>
+                    <h2>서비스 소개</h2>
+                </div>
+                <ul class="indexWrap">
+                    <li class="home"><a href="index.html">HOME</a></li>
+                    <li class="service"><a href="#">서비스 소개</a></li>
+                </ul>
+            </div>
+            <p class="visualTxt">
+                경기도 온라인 정책연구도서관은 경기도민이 경기도 관련 정책을 쉽고 편리하게 찾아볼 수 있도록,
+                경기도 및 31개 시·군을 비롯하여 도내 공공기관에서 수행한 정책 연구 및 주요 시책 등 경기도 정책연구정보를 제공하는 정책연구정보 서비스입니다.
+            </p>
+            <p class="visualTxtM">
+                도내 공공기관에서 수행한 정책 연구 및 주요 시책 등 경기도 정책연구정보를 제공하는 정책연구정보 서비스
+            </p>
+        </div>
+    </div>
+
+    <section data-aos="fade-up" class="sec1Wrap">
+        <div class="sec1">
+            <h3 class="secTitle">온라인 정책연구 도서관의 목적</h3>
+            <div class="boxWrap">
+                <div class="box box1">
+                    <div class="iconArea">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path d="M29.7968 2.60036V9.0002M32.9967 5.80028H26.5969M4.19748 24.9998V28.1997M5.79743 26.5998H2.59752M13.6964 22.5999C13.5536 22.0462 13.265 21.5408 12.8606 21.1365C12.4563 20.7322 11.951 20.4436 11.3973 20.3007L1.58155 17.7696C1.41408 17.722 1.26669 17.6212 1.16174 17.4823C1.05678 17.3434 1 17.1741 1 17C1 16.8259 1.05678 16.6566 1.16174 16.5177C1.26669 16.3788 1.41408 16.278 1.58155 16.2304L11.3973 13.6977C11.9508 13.555 12.456 13.2666 12.8603 12.8626C13.2646 12.4585 13.5533 11.9535 13.6964 11.4001L16.2276 1.58438C16.2746 1.41626 16.3754 1.26814 16.5145 1.16263C16.6536 1.05711 16.8234 1 16.9979 1C17.1725 1 17.3423 1.05711 17.4814 1.16263C17.6205 1.26814 17.7213 1.41626 17.7683 1.58438L20.2979 11.4001C20.4407 11.9538 20.7293 12.4591 21.1336 12.8635C21.538 13.2678 22.0433 13.5564 22.597 13.6993L32.4127 16.2288C32.5815 16.2754 32.7304 16.376 32.8365 16.5153C32.9426 16.6546 33 16.8249 33 17C33 17.1751 32.9426 17.3454 32.8365 17.4847C32.7304 17.624 32.5815 17.7246 32.4127 17.7712L22.597 20.3007C22.0433 20.4436 21.538 20.7322 21.1336 21.1365C20.7293 21.5408 20.4407 22.0462 20.2979 22.5999L17.7667 32.4156C17.7197 32.5837 17.6189 32.7319 17.4798 32.8374C17.3407 32.9429 17.1709 33 16.9963 33C16.8218 33 16.652 32.9429 16.5129 32.8374C16.3738 32.7319 16.273 32.5837 16.226 32.4156L13.6964 22.5999Z" stroke="#4488DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="boxTitle">
+                        행정의 투명/신뢰성
+                    </div>
+                    <ul class="boxTxt">
+                        <li>경기도와 31개 시·군 간 소통과 협력 채널 구축</li>
+                        <li>정책 공개를 통한 행정의 투명/신뢰성 확보</li>
+                    </ul>
+                </div>
+                <div class="box box2">
+                    <div class="iconArea">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path d="M33 5.8C33 8.45097 25.8366 10.6 17 10.6C8.16344 10.6 1 8.45097 1 5.8M33 5.8C33 3.14903 25.8366 1 17 1C8.16344 1 1 3.14903 1 5.8M33 5.8V28.2C33 29.473 31.3143 30.6939 28.3137 31.5941C25.3131 32.4943 21.2435 33 17 33C12.7565 33 8.68687 32.4943 5.68629 31.5941C2.68571 30.6939 1 29.473 1 28.2V5.8M1 17C1 18.273 2.68571 19.4939 5.68629 20.3941C8.68687 21.2943 12.7565 21.8 17 21.8C21.2435 21.8 25.3131 21.2943 28.3137 20.3941C31.3143 19.4939 33 18.273 33 17" stroke="#4488DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="boxTitle">
+                        예산의 효율적 집행
+                    </div>
+                    <ul class="boxTxt">
+                        <li>검색을 통해 도민의 알 권리 보장</li>
+                        <li>정보 공유를 통해 연구 수행 중복 방지</li>
+                    </ul>
+                </div>
+                <div class="box box3">
+                    <div class="iconArea">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path d="M11.6667 1H2.77778C1.79594 1 1 1.79594 1 2.77778V11.6667C1 12.6485 1.79594 13.4444 2.77778 13.4444H11.6667C12.6485 13.4444 13.4444 12.6485 13.4444 11.6667V2.77778C13.4444 1.79594 12.6485 1 11.6667 1Z" stroke="#4488DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M31.2222 1H22.3333C21.3515 1 20.5556 1.79594 20.5556 2.77778V11.6667C20.5556 12.6485 21.3515 13.4444 22.3333 13.4444H31.2222C32.2041 13.4444 33 12.6485 33 11.6667V2.77778C33 1.79594 32.2041 1 31.2222 1Z" stroke="#4488DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M31.2222 20.5556H22.3333C21.3515 20.5556 20.5556 21.3515 20.5556 22.3333V31.2222C20.5556 32.2041 21.3515 33 22.3333 33H31.2222C32.2041 33 33 32.2041 33 31.2222V22.3333C33 21.3515 32.2041 20.5556 31.2222 20.5556Z" stroke="#4488DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.6667 20.5556H2.77778C1.79594 20.5556 1 21.3515 1 22.3333V31.2222C1 32.2041 1.79594 33 2.77778 33H11.6667C12.6485 33 13.4444 32.2041 13.4444 31.2222V22.3333C13.4444 21.3515 12.6485 20.5556 11.6667 20.5556Z" stroke="#4488DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="boxTitle">
+                        행정의 효율성 증대
+                    </div>
+                    <ul class="boxTxt">
+                        <li>정책 연구 정보의 허브 역할</li>
+                        <li>행정의 효율성 증대 기여</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up" class="sec2Wrap">
+
+        <div class="sec2">
+            <h3 class="secTitle">투명/신뢰성 확보 및 알 권리 제공</h3>
+            <div class="sec2Con">
+                <div data-aos="flip-left" data-aos-offset="300" class="circle">
+                    <div class="innerCircle">경기도 정책정보</div>
+                    <div class="dot dot1">
+                        <img src="img/circleSmallDots.svg" alt="">
+                    </div>
+                    <div class="dot dot2">
+                        <img src="img/circleSmallDots.svg" alt="">
+                    </div>
+                    <div class="dot dot3">
+                        <img src="img/circleSmallDots.svg" alt="">
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="200" class="desc">
+                    <div class="descTitle">
+                        서비스 개요 및 정책 분야
+                    </div>
+                    <ul class="descTxt">
+                        <li>정책연구자료 원문 및 우수 시책 등 최신 동향 자료에 대한 통합 검색, 주제별·기관별·연도별 검색, 인기 자료, 최신 자료 등을 제공</li>
+                        <li>타임 아카이브에서 민선1기에서 민선8기까지 시기별 정책 변화의 추이 확인</li>
+                        <li> 도민이 추진되길 희망하는 정책 아이디어가 있다면 경기도 및 31개 시·군에 대해 정책 제안을 제시</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up" class="sec3Wrap">
+        <div class="sec3">
+            <h3 class="secTitle">주제 분류 체계 소개</h3>
+            <div class="boxWrap">
+                <div class="box box1">
+                    <div class="titleArea">
+                        <p>지방행정/안보</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>지방행정</li>
+                        <li>공공질서 및 안전</li>
+                    </ul>
+                </div>
+                <div class="box box2">
+                    <div class="titleArea">
+                        <p>지역개발</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>도시</li>
+                        <li>부동산</li>
+                    </ul>
+                </div>
+                <div class="box box3">
+                    <div class="titleArea">
+                        <p>문화체육관광</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>문화체육관광</li>
+                    </ul>
+                </div>
+                <div class="box box4">
+                    <div class="titleArea">
+                        <p>교통/물류</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>교통</li>
+                        <li>물류</li>
+                    </ul>
+                </div>
+                <div class="box box5">
+                    <div class="titleArea">
+                        <p>통일/외교/안보</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>통일</li>
+                        <li>외교</li>
+                        <li>안보</li>
+                    </ul>
+                </div>
+                <div class="box box6">
+                    <div class="titleArea">
+                        <p>사회/복지/보건</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>사회</li>
+                        <li>복지</li>
+                        <li>보건</li>
+                    </ul>
+                </div>
+                <div class="box box7">
+                    <div class="titleArea">
+                        <p>교육</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>교육</li>
+                    </ul>
+                </div>
+                <div class="box box8">
+                    <div class="titleArea">
+                        <p>경제/산업/노동</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>경제</li>
+                        <li>산업</li>
+                        <li>노동</li>
+                        <li>과학기술</li>
+                    </ul>
+                </div>
+                <div class="box box9">
+                    <div class="titleArea">
+                        <p>농림/축산/해양</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>농림/축산</li>
+                        <li>해양</li>
+                    </ul>
+                </div>
+                <div class="box box10">
+                    <div class="titleArea">
+                        <p>환경</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul>
+                        <li>환경</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec4Wrap">
+        <div class="sec4">
+            <div class="conWrap">
+                <h3 class="secTitle">이용방법</h3>
+                <p class="mainTxt">로그인 절차 없이 누구나 이용 가능 합니다. 기타 자세한 사항은 관리자에게 메일을 통해 문의하시기 바랍니다.</p>
+                <p class="subTxt">문의 : 경기연구원 온라인연구정책도서관 담당자 / gplib@gri.re.kr</p>
+            </div>
+            <button class="askBtn">
+                문의하기
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerConWrap">
+            <div class="footerTop">
+                <ul class="topLogo">
+                    <li><a href="index.html"><img src="img/footerLogo1.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/footerLogo2.png" alt=""></a></li>
+                </ul>
+                <ul class="topList">
+                    <li>저작권 정책</li>
+                    <li>RSS 서비스</li>
+                    <li>사이트맵</li>
+                    <li>통합검색</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footerBottom">
+                <ul class="bottomList">
+                    <li>우&#41;16207 경기도 수원시 장안구 경수대로 1150</li>
+                    <li>Copyrightⓒ 2019 GRI. All rights reserved</li>
+                </ul>
+                <ul class="bottomLogo">
+                    <li><img src="img/footerLogo3.png" alt=""></li>
+                    <li><img src="img/footerLogo4.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scrollTop">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M1 13L13 1M13 1L25 13M13 1V25" stroke="#0A4B98" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+    <!-- script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기도 온라인 정책연구도서관</title>
+    <link rel="stylesheet" href="css/resrt.css">
+    <link rel="stylesheet" href="css/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/lottie-player.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="gnbWrap">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="img/logoHeader.svg" alt="logo">
+                </a>
+            </h1>
+            <ul class="navPC">
+                <li><a href="#">정책분야</a></li>
+                <li><a href="#">기관</a></li>
+                <li><a href="#">타임 아카이브</a></li>
+                <li><a href="#">정책 동향</a></li>
+                <li><a href="service.html">서비스 소개</a></li>
+            </ul>
+            <button class="navBtnPC">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path
+                        d="M25 25L19.2667 19.2667M22.3333 11.6667C22.3333 17.5577 17.5577 22.3333 11.6667 22.3333C5.77563 22.3333 1 17.5577 1 11.6667C1 5.77563 5.77563 1 11.6667 1C17.5577 1 22.3333 5.77563 22.3333 11.6667Z"
+                        stroke="#111F30" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="navBtnM">
+                <div class="iconSearch">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <path
+                            d="M25 25L19.2667 19.2667M22.3333 11.6667C22.3333 17.5577 17.5577 22.3333 11.6667 22.3333C5.77563 22.3333 1 17.5577 1 11.6667C1 5.77563 5.77563 1 11.6667 1C17.5577 1 22.3333 5.77563 22.3333 11.6667Z"
+                            stroke="#111F30" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="iconMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div class="searchModal">
+            <div class="searchArea">
+                <p>#대중교통</p>
+                <p>#코로나</p>
+            </div>
+            <div class="recent">
+                <p class="recentTitle">최근 검색어</p>
+                <ul class="recentList">
+                    <li>
+                        <div class="txt">
+                            <img src="img/iconTime.svg" alt="">
+                            <p>경기도 온라인 정책</p>
+                        </div>
+                        <div class="close">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <img src="img/iconTime.svg" alt="">
+                            <p>경기도 온라인 정책 연구 도서관</p>
+                        </div>
+                        <div class="close">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menuModal">
+            <div class="dim"></div>
+            <ul class="menuModalList">
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>정책분야</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">경기도 온라인 정책</a></li>
+                        <li><a href="#">공공질서 및 안전</a></li>
+                        <li><a href="#">도청</a></li>
+                        <li><a href="#">문화체육관광</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>기관</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">도청</a></li>
+                        <li><a href="#">시/군</a></li>
+                        <li><a href="#">공공기관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>타임아카이브</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">연도별 기관</a></li>
+                        <li><a href="#">연도별 분야</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>정책 동향</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="#">최근정책</a></li>
+                        <li><a href="#">관심정책</a></li>
+                        <li><a href="#">주요시책</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M17 1L1 17M1 1L17 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p>서비스 소개</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="service.html">서비스 소개</a></li>
+                        <li><a href="#">참여기관</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="visual">
+        <div class="visualTxtWrap">
+            <h2  data-aos="fade-up">
+                경기도의 정책연구가 한곳에!
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="400">
+                경기도 온라인정책연구도서관은 경기도, 31개 시 · 군, 공공기관의 정책연구정보를<br>
+                통합 · 공개하여 행정의 투명성, 신뢰성을 확보하고<br>
+                경기도민의 알 권리를 제공하는 정책연구정보의 허브입니다.
+            </p>
+        </div>
+        <div class="scroll"></div>
+    </div>
+
+    <section class="sec1Wrap">
+        <div data-aos="fade-up" class="sec1">
+            <div class="secTitle sec1Title">
+                <h3>정책분야</h3>
+                <a class="viewMore" href="#">
+                    <div class="viewMoreBtn">
+                        <p>전체보기</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div data-aos="fade-up" class="swiper swiperSec1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide1">
+                        <div class="icon iconPolicy">
+                            <lottie-player class="lottie lottiePolicy" src="img/iconPolicy.json"
+                                background="transparent" speed="1" loop></lottie-player>
+                            <img src="img/iconPolicy.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">지방행정/안전</p>
+                            <p class="subTxt">2840건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide2">
+                        <div class="icon iconLocal">
+                            <lottie-player class="lottie lottieLocal" src="img/iconLocal.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconLocal.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">지역개발</p>
+                            <p class="subTxt">2350건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide3">
+                        <div class="icon iconCulture">
+                            <lottie-player class="lottie lottieCulture" src="img/iconCulture.json"
+                                background="transparent" speed="1" loop></lottie-player>
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <img src="img/iconCulture.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">문화체육관광</p>
+                            <p class="subTxt">238건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide4">
+                        <div class="icon iconTrans">
+                            <lottie-player class="lottie lottieTrans" src="img/iconTrans.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconTrans.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">교통/물류</p>
+                            <p class="subTxt">13238건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide5">
+                        <div class="icon iconUnity">
+                            <lottie-player class="lottie lottieUnity" src="img/iconUnity.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconUnity.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">통일/외교/안보</p>
+                            <p class="subTxt">138건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide6">
+                        <div class="icon iconSociety">
+                            <lottie-player class="lottie lottieSociety" src="img/iconSociety.json"
+                                background="transparent" speed="1" loop></lottie-player>
+                            <img src="img/iconSociety.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">사회/복지/보건</p>
+                            <p class="subTxt">582건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide7">
+                        <div class="icon iconEdu">
+                            <lottie-player class="lottie lottieEdu" src="img/iconEdu.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconEdu.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">교육</p>
+                            <p class="subTxt">8832건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide8">
+                        <div class="icon iconEcon">
+                            <lottie-player class="lottie lottieEcon" src="img/iconEcon.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconEcon.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">경제/산업/노동</p>
+                            <p class="subTxt">332건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide9">
+                        <div class="icon iconAgric">
+                            <lottie-player class="lottie lottieAgric" src="img/iconAgric.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconAgric.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">농림/축산/해양</p>
+                            <p class="subTxt">5834건</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide10">
+                        <div class="icon iconEnv">
+                            <lottie-player class="lottie lottieEnv" src="img/iconEnv.json" background="transparent"
+                                speed="1" loop></lottie-player>
+                            <img src="img/iconEnv.svg" alt="">
+                        </div>
+                        <div class="txtWrap">
+                            <p class="mainTxt">환경</p>
+                            <p class="subTxt">534건</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec2Wrap">
+        <div data-aos="fade-up" class="sec2">
+            <div class="secTitle sec2Title">
+                <h3>주제별 정책</h3>
+                <div class="viewGroup">
+                    <p class="subjectGroup on">주제별</p>
+                    <p class="timeGroup">기간별</p>
+                </div>
+            </div>
+            <div class="boxWrap boxWrapTime">
+                <div class="box box1">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject1.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 스마트 건설기술 가이드라인 작성 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-12-13</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableCity">도시</p>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject2.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기지방정원-안산갈대습지-화성비봉습지 통합운영방안</p>
+                            <div class="detail">
+                                <p class="year">2024-12-05</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableEnv">환경</p>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject3.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 의료기기 산업 생태계 조성 방안 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-12-01</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable labelHealth">보건</p>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject4.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 산림자원의 지속가능한 관리 방안</p>
+                            <div class="detail">
+                                <p class="year">2024-11-30</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable labelAgric">농림/축산</p>
+                    </div>
+                </div>
+                <div class="box box5">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject5.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기북부 드론규제 현황 및 완화 전략 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-11-28</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableSecurity">안보</p>
+                    </div>
+                </div>
+                <div class="box box6">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject6.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">기후위기 시대, 경기도 기후보건 정책과 전략</p>
+                            <div class="detail">
+                                <p class="year">2024-11-23</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableEnv">환경</p>
+                    </div>
+                </div>
+                <div class="box box7">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject7.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 기후격차 실태조사 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-11-16</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableEnv">환경</p>
+                    </div>
+                </div>
+                <div class="box box8">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject8.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">이주배경인구의 다양성과 정책 대응 방안</p>
+                            <div class="detail">
+                                <p class="year">2024-10-23</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableSociety">사회</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boxWrap boxWrapSubject on">
+                <div class="box box2">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject2.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기지방정원-안산갈대습지-화성비봉습지 통합운영방안</p>
+                            <div class="detail">
+                                <p class="year">2024-12-05</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableEnv">환경</p>
+                    </div>
+                </div>
+                <div class="box box6">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject6.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">기후위기 시대, 경기도 기후보건 정책과 전략</p>
+                            <div class="detail">
+                                <p class="year">2024-11-23</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableEnv">환경</p>
+                    </div>
+                </div>
+                <div class="box box7">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject7.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 기후격차 실태조사 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-11-16</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableEnv">환경</p>
+                    </div>
+                </div>
+                <div class="box box1">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject1.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 스마트 건설기술 가이드라인 작성 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-12-13</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableCity">도시</p>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject3.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 의료기기 산업 생태계 조성 방안 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-12-01</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable labelHealth">보건</p>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject4.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기도 산림자원의 지속가능한 관리 방안</p>
+                            <div class="detail">
+                                <p class="year">2024-11-30</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable labelAgric">농림/축산</p>
+                    </div>
+                </div>
+                <div class="box box5">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject5.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">경기북부 드론규제 현황 및 완화 전략 연구</p>
+                            <div class="detail">
+                                <p class="year">2024-11-28</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableSecurity">안보</p>
+                    </div>
+                </div>
+                <div class="box box8">
+                    <div class="imgWrap">
+                        <img src="img/imgSubject8.jpg" alt="">
+                    </div>
+                    <div class="titleWrap">
+                        <div class="txtWrap">
+                            <p class="title">이주배경인구의 다양성과 정책 대응 방안</p>
+                            <div class="detail">
+                                <p class="year">2024-10-23</p>
+                                <p class="inst">경기연구원</p>
+                            </div>
+                        </div>
+                        <p class="lable lableSociety">사회</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up" class="sec3Wrap">
+        <div class="sec3">
+            <div class="secTitle sec3Title">
+                <h3>온라인 정책연구 한눈에 보기</h3>
+                <p class="standardTime">2024년 12월 기준</p>
+            </div>
+            <ul class="conWrap">
+                <li class="con">
+                    <p class="title">보고서</p>
+                    <p class="amount">12,948건</p>
+                </li>
+                <li class="con">
+                    <p class="title">시책자료</p>
+                    <p class="amount">8,743건</p>
+                </li>
+                <li class="con">
+                    <p class="title">홍보자료</p>
+                    <p class="amount">463건</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section data-aos="fade-up" class="sec4Wrap">
+        <div class="sec4">
+            <div class="secTitle sec4Title">
+                <div class="sec4titleGroup">
+                    <h3>정책연구자료</h3>
+                    <p>연도별 정책타임 아카이브</p>
+                </div>
+                <a class="viewMore" href="#">
+                    <div class="viewMoreBtn">
+                        <p>더보기</p>
+                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                            <path d="M1 1L9 9L0.999999 17" stroke="#111F30" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <ul class="timeline">
+                <li data-aos="flip-left" data-aos-offset="100" class="yearWrap">
+                    <div class="yearGroup">
+                        <div class="year">2024년</div>
+                        <div class="amount">300건</div>
+                    </div>
+                </li>
+                <li data-aos="flip-left" data-aos-offset="100" class="hrz"></li>
+                <li data-aos="flip-left" data-aos-offset="100" class="yearWrap">
+                    <div class="yearGroup">
+                        <div class="year">2023년</div>
+                        <div class="amount">5320건</div>
+                    </div>
+                </li>
+                <li data-aos="flip-left" data-aos-offset="100" class="hrz"></li>
+                <li data-aos="flip-left" data-aos-offset="100" class="yearWrap">
+                    <div class="yearGroup">
+                        <div class="year">2022년</div>
+                        <div class="amount">2350건</div>
+                    </div>
+                </li>
+                <li data-aos="flip-left" data-aos-offset="100" class="hrz"></li>
+                <li data-aos="flip-left" data-aos-offset="100" class="yearWrap">
+                    <div class="yearGroup">
+                        <div class="year">2021년</div>
+                        <div class="amount">5476건</div>
+                    </div>
+                </li>
+                <li data-aos="flip-left" data-aos-offset="100" class="hrz"></li>
+                <li data-aos="flip-left" data-aos-offset="100" class="yearWrap">
+                    <div class="yearGroup">
+                        <div class="year">2020년</div>
+                        <div class="amount">8329건</div>
+                    </div>
+                </li>
+                <li data-aos="flip-left" data-aos-offset="100" class="hrz"></li>
+                <li data-aos="flip-left" data-aos-offset="100" class="yearWrap viewAll">
+                    <div class="yearGroup">
+                        <div class="amount">전체보기</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="sec5Wrap">
+        <div class="sec5">
+            <ul class="logoCityWrap">
+                <li><img src="img/logoCity01.png" alt=""></li>
+                <li><img src="img/logoCity02.png" alt=""></li>
+                <li><img src="img/logoCity03.png" alt=""></li>
+                <li><img src="img/logoCity04.png" alt=""></li>
+                <li><img src="img/logoCity05.png" alt=""></li>
+                <li><img src="img/logoCity06.png" alt=""></li>
+                <li><img src="img/logoCity07.png" alt=""></li>
+                <li><img src="img/logoCity08.png" alt=""></li>
+                <li><img src="img/logoCity09.png" alt=""></li>
+                <li><img src="img/logoCity10.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerConWrap">
+            <div class="footerTop">
+                <ul class="topLogo">
+                    <li><a href="index.html"><img src="img/footerLogo1.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/footerLogo2.png" alt=""></a></li>
+                </ul>
+                <ul class="topList">
+                    <li>저작권 정책</li>
+                    <li>RSS 서비스</li>
+                    <li>사이트맵</li>
+                    <li>통합검색</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footerBottom">
+                <ul class="bottomList">
+                    <li>우&#41;16207 경기도 수원시 장안구 경수대로 1150</li>
+                    <li>Copyrightⓒ 2019 GRI. All rights reserved</li>
+                </ul>
+                <ul class="bottomLogo">
+                    <li><img src="img/footerLogo3.png" alt=""></li>
+                    <li><img src="img/footerLogo4.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scrollTop">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M1 13L13 1M13 1L25 13M13 1V25" stroke="#0A4B98" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+    <!-- script -->
+    <script src="js/script.js"></script>
+
+    <!-- lottie -->
+    <script>
+        const slides = document.querySelectorAll('.swiper-slide');
+
+        slides.forEach(slide => {
+            const lottiePlayer = slide.querySelector('.lottie');
+
+            slide.addEventListener('mouseenter', () => {
+                lottiePlayer.play();
+            });
+
+            slide.addEventListener('mouseleave', () => {
+                lottiePlayer.stop();
+            });
+        });
+    </script>
+
+    <!-- scrollmagic -->
+    <script>
+        // GSAP 및 ScrollMagic 초기화
+        const controller = new ScrollMagic.Controller();
+
+        // 가로 스크롤 타임라인 생성
+        const timeline = gsap.timeline();
+        let xValue, durationValue;
+
+        if (window.innerWidth < 768) {
+            xValue = -1720;
+            durationValue = 2700;
+        } else if (window.innerWidth < 1000) {
+            xValue = -2380;
+            durationValue = 2800;
+        } else {
+            xValue = -2300;
+            durationValue = 2800;
+        }
+        timeline.to(".timeline", {
+            x: xValue
+        });
+
+        // ScrollMagic 씬 생성
+        new ScrollMagic.Scene({
+            triggerElement: ".sec4Wrap", // 스크롤 트리거 시작 지점
+            triggerHook: 0,
+            duration: durationValue
+            // 전체 스크롤 길이
+        })
+            .setTween(timeline) // 애니메이션 연결
+            // .setPin(".sec4") // sec4 요소 고정
+            // .addIndicators({ name: "Horizontal Scroll" }) // 디버그 표시 (개발 시 사용)
+            .addTo(controller);
+
+        function destroyScrollMagic() {
+            // ScrollMagic 비활성화
+            if (controller) {
+                controller.destroy(true); // 컨트롤러 제거
+                controller = null; // 초기화
+            }
+
+            if (scene) {
+                scene.destroy(true); // 씬 제거
+                scene = null; // 초기화
+            }
+        }
+
+        function handleResize() {
+            if (window.innerWidth < 768) {
+                destroyScrollMagic(); // 768px 이하에서는 ScrollMagic 비활성화
+            } else {
+                if (!controller) {
+                    initializeScrollMagic(); // 768px 이상에서는 ScrollMagic 활성화
+                }
+            }
+        }
+
+        // 초기 실행
+        handleResize();
+
+        // 화면 크기 변경 이벤트
+        window.addEventListener("resize", handleResize);
+    </script>
+</body>
+
+</html>

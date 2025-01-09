@@ -1,0 +1,1008 @@
+@charset "utf-8";
+
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    z-index: 100;
+}
+
+/* gnb */
+.gnbWrap{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/* gnb PC */
+.navPC{
+    display: flex;
+}
+.navPC li a{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color:#111F30;
+    padding: 0 20px;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+.navPC li:last-child a{
+    color: #0A4B98;
+}
+.navPC li a:hover{
+    color: #0A4B98;
+}
+.navBtnPC{
+    display: block;
+}
+.navBtnPC svg{
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0 8px 16px;
+    stroke-width: 2px;
+    transition: all 0.3s;
+}
+.navBtnPC svg:hover path{
+    stroke: #0A4B98;
+}
+.navBtnPC svg.on{
+    fill: #F2F4F5;
+}
+.navBtnPC svg.on path{
+    stroke: #0A4B98;
+}
+
+/* gnb Mobile */
+.navBtnM{
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+.navBtnM .iconSearch svg{
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0 8px 16px;
+    stroke-width: 2px;
+    transition: all 0.3s;
+}
+.navBtnM .iconSearch svg:hover path{
+    stroke: #0A4B98;
+}
+.navBtnM .iconSearch svg.on{
+    fill: #F2F4F5;
+}
+.navBtnM .iconSearch svg.on path{
+    stroke: #0A4B98;
+}
+.navBtnM .iconMenu{
+    width: 40px;
+    padding: 8px 0 8px 16px;
+}
+.navBtnM .iconMenu span{
+    width: 24px;
+    height: 2px;
+    background-color: #111F30;
+    display: block;
+    margin: 7px 0;
+    transition: all 0.3s;
+}
+.navBtnM .iconMenu:hover span{
+    background-color: #0A4B98;
+}
+.navBtnM .iconMenu.on{
+    width: 40px;
+    padding: 8px 0 8px 12px;
+}
+.navBtnM .iconMenu.on span{
+    background-color: #0A4B98;
+    margin: 0;
+}
+.navBtnM .iconMenu.on span:nth-child(2){
+    opacity: 0;
+}
+.navBtnM .iconMenu.on span:nth-child(1){
+    width: 28px;
+    transform: translateY(2px) rotate(45deg);
+}
+.navBtnM .iconMenu.on span:nth-child(3){
+    width: 28px;
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+/* search btn click modal */
+.searchModal{
+    position: relative;
+    top: -400px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    height: 0;
+    width: 100%;
+    max-width: 692px;
+    transition: all 0.3s;
+    z-index: 9;
+}
+.searchModal.on{
+    padding: 24px 20px 400px 20px;
+    top: 0;
+}
+.searchArea{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    padding: 16px 40px;
+    border-radius: 100px;
+    border: 1px solid #4488DA;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+.searchArea p{
+    font-size: 24px;
+    font-weight: 400;
+    color: #A8CCF8;
+}
+.recent{
+    width: 100%;
+}
+.recent .recentTitle{
+    font-size: 20px;
+    font-weight: 400;
+    color: #949DA8;
+    padding-bottom: 8px;
+}
+.recent .recentList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+.recent .recentList li .txt{
+    display: flex;
+    gap: 4px;
+}
+.recent .recentList li .txt p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #4488DA;
+}
+.recent .recentList li .close svg{
+    width: 16px;
+    cursor: pointer;
+}
+.recent .recentList li .close svg path{
+    stroke: #4488DA;
+}
+
+/* mobile menu click modal */
+.menuModal .dim{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: all 0.3s;
+    display: none;
+}
+.menuModal.on .dim{
+    opacity: 1;
+    z-index: 1;
+    display: block;
+}
+.menuModal .menuModalList{
+    display: none;
+    padding: 104px 20px 24px 20px;
+    text-align: right;
+    width: 60%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: -500px;
+    transition: 0.3s;
+    gap: 16px;
+    z-index: 2;
+}
+.menuModal.on .menuModalList{
+    right: 0;
+}
+.menuModal .menuModalList>li{
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+.menuModal .menuModalList>li .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EBF4FF;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+.menuModal .menuModalList>li .list{
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    padding: 0 16px;
+}
+.menuModal .menuModalList>li .list li a{
+    color: #0A4B98;
+    font-size: 14px;
+    font-weight: 400;
+}
+.menuModal .menuModalList>li .title p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #0A4B98;
+}
+.menuModal .menuModalList>li .title svg{
+    transform: rotate(45deg);
+    transition: all 0.3s;
+    width: 12px;
+}
+.menuModal .menuModalList>li .title svg path{
+    stroke: #0A4B98;
+}
+
+.menuModal .menuModalList>li.on .title{
+    margin-bottom: 8px;
+    background-color: #1C62B8;
+}
+.menuModal .menuModalList>li.on .list{
+    display: flex;
+}
+.menuModal .menuModalList>li.on .title p{
+    color: #EBF4FF;
+}
+.menuModal .menuModalList>li.on .title svg{
+    transform: rotate(0deg);
+}
+.menuModal .menuModalList>li.on .title svg path{
+    stroke: #EBF4FF;
+}
+
+/* visual */
+.visual{
+    width: 100%;
+    background: url("../img/visualSub.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+}
+.visualCon{
+    width: 100%;
+    max-width: 1440px;
+    padding: 240px 20px 160px 20px;
+    margin: 0 auto;
+}
+.visualCon .visualTitle{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+.visualCon .visualTitle .titleWrap{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.visualCon .visualTitle .titleWrap .line{
+    width: 120px;
+    height: 1px;
+    border-radius: 1px;
+    background-color: #fff;
+}
+.visualCon .visualTitle .titleWrap h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+.visualCon .visualTitle .indexWrap{
+    display: flex;
+    gap: 16px;
+}
+.visualCon .visualTitle .indexWrap li{
+    position: relative;
+}
+.visualCon .visualTitle .indexWrap li a{
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+}
+.visualCon .visualTitle .indexWrap li.home a{
+    color: #A8CCF8;
+    opacity: 0.4;
+}
+.visualCon .visualTitle .indexWrap li.home::before{
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+    width: 1px;
+    height: 12px;
+    background-color: #A8CCF8;
+    top: 50%;
+    right: -8px;
+    transform: translate(0, -50%);
+}
+.visualCon .visualTitle .indexWrap li.service a{
+    color: #A8CCF8;
+}
+.visualCon .visualTxt{
+    font-size: 20px;
+    font-weight: 400;
+    color: #EBF4FF;
+    word-break: keep-all;
+    display: block;
+}
+.visualCon .visualTxtM{
+    display: none;
+}
+
+/* section title */
+section>div{
+    width: 100%;
+    max-width: 1440px;
+    padding: 160px 20px;
+    margin: 0 auto;
+}
+section .secTitle{
+    font-size: 30px;
+    font-weight: 600;
+    color: #111F30;
+    margin-bottom: 40px;
+}
+
+/* sec1 */
+.sec1 .boxWrap{
+    display: flex;
+    gap: 16px;
+}
+.sec1 .boxWrap .box{
+    padding: 40px 24px;
+    border-radius: 24px;
+    background-color: #EBF4FF;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s;
+}
+.sec1 .boxWrap .box:hover{
+    background-color: #1C62B8;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+.sec1 .boxWrap .box .iconArea{
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(10, 75, 152, 0.08);
+    background-color: rgba(255, 255, 255, 0.16);
+    transition: all 0.3s;
+}
+.sec1 .boxWrap .box:hover .iconArea{
+    border: 1px solid #0A4B98;
+    background-color: #0A4B98;
+
+}
+.sec1 .boxWrap .box .iconArea svg{
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.sec1 .boxWrap .box .iconArea svg path{
+    transition: all 0.3s;
+}
+.sec1 .boxWrap .box:hover .iconArea svg path{
+    stroke: #fff;
+}
+.sec1 .boxWrap .box .boxTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1C62B8;
+}
+.sec1 .boxWrap .box:hover .boxTitle{
+    color: #fff;
+}
+.sec1 .boxWrap .box .boxTxt li{
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    color: #4488DA;
+    position: relative;
+    left: 12px;
+    word-break: keep-all;
+}
+.sec1 .boxWrap .box .boxTxt li::before{
+    content: "-";
+    display: inline;
+    position: absolute;
+    left: -12px;
+}
+.sec1 .boxWrap .box:hover .boxTxt li{
+    color: #fff;
+}
+
+/* sec2 */
+.sec2Wrap{
+    background-color: #F2F4F5;
+}
+.sec2 .sec2Con .circle{
+    width: 60vw;
+    height: 60vw;
+    max-width: 560px;
+    max-height: 560px;
+    background: url("../img/circleDashed.svg") no-repeat center/cover;
+    position: relative;
+    margin: 160px auto 80px;
+}
+.sec2 .sec2Con .circle .innerCircle{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4488DA;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 88%;
+    height: 88%;
+    margin: 0 50%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec2 .sec2Con .circle .dot{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.sec2 .sec2Con .circle .dot img{
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.sec2 .sec2Con .circle .dot1{
+    top: 0;
+    left: 50%;
+}
+.sec2 .sec2Con .circle .dot1::after{
+    content: "경기도 정책 도서관";
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A4B98;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.sec2 .sec2Con .circle .dot2{
+    top: 80%;
+    left: 10%;
+}
+.sec2 .sec2Con .circle .dot2::after{
+    content: "공공기관";
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A4B98;
+    position: absolute;
+    top: 50%;
+    right: 140%;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+}
+.sec2 .sec2Con .circle .dot3{
+    top: 80%;
+    left: 90%;
+}
+.sec2 .sec2Con .circle .dot3::after{
+    content: "경기도민";
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A4B98;
+    position: absolute;
+    top: 50%;
+    left: 140%;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+}
+.sec2 .sec2Con .desc{
+    background-color: rgba(255, 255, 255, 0.24);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+    padding: 40px 80px;
+}
+.sec2 .sec2Con .desc .descTitle{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A4B98;
+    margin-bottom: 8px;
+}
+.sec2 .sec2Con .desc .descTxt li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #47525F;
+    position: relative;
+    left: 12px;
+    margin-bottom: 4px;
+    word-break: keep-all;
+}
+.sec2 .sec2Con .desc .descTxt li:last-child{
+    margin-bottom: 0;
+}
+.sec2 .sec2Con .desc .descTxt li::before{
+    content: "- ";
+    display: block;
+    color: #47525F;
+    position: absolute;
+    left: -12px;
+}
+
+/* sec3 */
+.sec3 .boxWrap{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+}
+.sec3 .boxWrap .box{
+    height: 220px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.sec3 .boxWrap .box:hover{
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+.sec3 .boxWrap .box::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 440px;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 50%);
+    top: -100%;
+    left: 0;
+    transition: all 0.3s;
+}
+.sec3 .boxWrap .box:hover::before{
+    top: 0%;
+}
+.sec3 .boxWrap .box .titleArea{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.sec3 .boxWrap .box .titleArea p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.sec3 .boxWrap .box .titleArea svg path{
+    stroke: #fff;
+}
+.sec3 .boxWrap .box ul{
+    position: absolute;
+    bottom: -120px;
+    left: 24px;
+    transition: all 0.3s;
+}
+.sec3 .boxWrap .box:hover ul{
+    bottom: 24px;
+}
+.sec3 .boxWrap .box ul li{
+    font-size: 20px;
+    font-weight: 400;
+    color: #F2F4F5;
+}
+.sec3 .boxWrap .box ul li::before{
+    content: "- ";
+}
+.sec3 .boxWrap .box1{
+    background: url(../img/imgSubSubject01.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box2{
+    background: url(../img/imgSubSubject02.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box3{
+    background: url(../img/imgSubSubject03.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box4{
+    background: url(../img/imgSubSubject04.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box5{
+    background: url(../img/imgSubSubject05.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box6{
+    background: url(../img/imgSubSubject06.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box7{
+    background: url(../img/imgSubSubject07.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box8{
+    background: url(../img/imgSubSubject08.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box9{
+    background: url(../img/imgSubSubject09.jpg) no-repeat center/cover;
+}
+.sec3 .boxWrap .box10{
+    background: url(../img/imgSubSubject10.jpg) no-repeat center/cover;
+}
+
+/* sec4 */
+.sec4Wrap{
+    background-color: #111F30;
+}
+.sec4Wrap .sec4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    gap: 80px;
+}
+.sec4Wrap .sec4 .conWrap h3{
+    color: #fff;
+    margin-bottom: 24px;
+}
+.sec4Wrap .sec4 .conWrap .mainTxt{
+    font-size: 20px;
+    font-weight: 400;
+    color: #F2F4F5;
+    word-break: keep-all;
+}
+.sec4Wrap .sec4 .conWrap .subTxt{
+    font-size: 20px;
+    font-weight: 400;
+    color: #949DA8;
+    word-break: keep-all;
+}
+.sec4Wrap .sec4 .askBtn{
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px 32px;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+.sec4Wrap .sec4 .askBtn:hover{
+    background-color: #fff;
+    color: #111F30;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: #F2F4F5;
+}
+.footerConWrap{
+    max-width: 1440px;
+    padding: 80px 20px;
+    margin: 0 auto;
+}
+.footerTop{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerTop .topLogo{
+    display: flex;
+    gap: 16px;
+}
+.footerTop .topLogo li a{
+    display: block;
+}
+.footerTop .topLogo li a img{
+    display: block;
+}
+.footerTop .topList{
+    display: flex;
+    gap: 32px;
+}
+.footerTop .topList li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #949DA8;
+    position: relative;
+    cursor: pointer;
+}
+.footerTop .topList li::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #D2D8DF;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    transform: translate(0, -50%);
+}
+.footerTop .topList li:last-child::before{
+    display: none;
+}
+footer hr{
+    height: 1px;
+    border: 0px;
+    background-color: #D2D8DF;
+    margin: 16px 0;
+}
+.footerBottom{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.footerBottom .bottomList li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #949DA8;
+}
+.footerBottom .bottomLogo{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.footerBottom .bottomLogo li{
+    width: 100%;
+}
+.footerBottom .bottomLogo li img{
+    display: block;
+    width: 100%;
+}
+
+/* scroll top */
+.scrollTop{
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    z-index: 99;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #EBF4FF;
+    border-radius: 100px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.scrollTop svg{
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+.scrollTop:hover svg path{
+    transition: all 0.3s;
+}
+.scrollTop:hover{
+    background-color: #0A4B98;
+    border: 1px solid #0A4B98;
+}
+.scrollTop:hover svg path{
+    stroke: #fff;
+}
+
+
+
+
+
+
+/* responsive tablet */
+@media screen and (max-width: 1439px) {
+    .sec3 .boxWrap{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .scrollTop{
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* responsive etc */
+@media screen and (max-width: 1000px) {
+    .sec3 .boxWrap{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sec4Wrap .sec4{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+
+
+/* responsive mobile */
+@media screen and (max-width: 767px) {
+    .navPC{
+        display: none;
+    }
+    .navBtnPC{
+        display: none;
+    }
+    .navBtnM{
+        display: flex;
+    }
+    .searchArea{
+        padding: 8px 16px;
+    }
+    .searchArea p{
+        font-size: 16px;
+        font-weight: 400;
+        color: #A8CCF8;
+    }
+    .recent .recentTitle{
+        font-size: 16px;
+    }
+    .recent .recentList li .txt p{
+        font-size: 16px;
+    }
+    .recent .recentList li .close svg{
+        width: 12px;
+    }
+    .menuModal .menuModalList{
+        display: block;
+    }
+    .visualCon{
+        padding: 160px 20px 80px 20px;
+    }
+    .visualCon .visualTitle{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 8px;
+    }
+    .visualCon .visualTitle .indexWrap li a{
+        font-size: 14px;
+    }
+    .visualCon .visualTitle .titleWrap .line{
+        display: none;
+    }
+    .visualCon .visualTitle .titleWrap h2{
+        font-size: 30px;
+    }
+    .visualCon .visualTxt{
+        display: none;
+    }
+    .visualCon .visualTxtM{
+        font-size: 16px;
+        font-weight: 400;
+        color: #EBF4FF;
+        word-break: keep-all;
+        text-align: center;
+        display: block;
+    }
+    section>div{
+        width: 100%;
+        max-width: 1440px;
+        padding: 80px 20px;
+        margin: 0 auto;
+    }
+    section .secTitle{
+        font-size: 24px;
+        word-break: keep-all;
+        margin-bottom: 24px;
+    }
+    .sec1 .boxWrap{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .sec1 .boxWrap .box{
+        width: 100%;
+    }
+    .sec2 .sec2Con .circle{
+        margin: 80px auto 80px;
+    }
+    .sec2 .sec2Con .circle .innerCircle{
+        font-size: 20px;
+    }
+    .sec2 .sec2Con .circle .dot{
+        width: 20px;
+        height: 20px;
+    }
+    .sec2 .sec2Con .circle .dot img{
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    .sec2 .sec2Con .circle .dot1::after{
+        font-size: 16px;
+        top: -16px;
+    }
+    .sec2 .sec2Con .circle .dot2::after{
+        font-size: 16px;
+        top: 40px;
+        right: 50%;
+    }
+    .sec2 .sec2Con .circle .dot3::after{
+        font-size: 16px;
+        top: 40px;
+        left: 50%;
+    }
+    .sec2 .sec2Con .desc{
+        padding: 24px 40px;
+    }
+    .sec2 .sec2Con .desc .descTitle{
+        font-size: 16px;
+    }
+    .sec2 .sec2Con .desc .descTxt li{
+        font-size: 14px;
+    }
+    .sec4Wrap .sec4{
+        gap: 24px;
+        padding: 56px 20px;
+    }
+    .sec4Wrap .sec4 .conWrap h3{
+        color: #fff;
+        margin-bottom: 16px;
+    }
+    .sec4Wrap .sec4 .conWrap .mainTxt{
+        font-size: 16px;
+    }
+    .sec4Wrap .sec4 .conWrap .subTxt{
+        font-size: 16px;
+    }
+    .sec4Wrap .sec4 .askBtn{
+        font-size: 16px;
+    }
+    .footerConWrap{
+        padding: 40px 20px;
+    }
+    .footerTop{
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .footerTop .topList{
+        display: flex;
+        gap: 24px;
+    }
+    .footerTop .topList li{
+        font-size: 14px;
+    }
+    .footerTop .topList li::before{
+        right: -12px;
+    }
+    .footerBottom{
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .footerBottom .bottomList li{
+        font-size: 14px;
+    }
+    .scrollTop{
+        display: none !important;
+    }
+}
+/* responsive etc */
+@media screen and (max-width: 560px) {
+    .sec3 .boxWrap{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
