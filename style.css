@@ -725,11 +725,14 @@ footer img{
 
 
 @media (max-width: 399px) {
+    .conWrap{
+        padding-top: 129px;
+    }
     header .headerBox{
         padding: 16px 24px;
     }
     header .headerBox h1 a img{
-        width: 200px;
+        width: 208px;
     }
     .artworks section .secFigWrap .viewBtnWrap .viewBtn{
         gap: 4px;
