@@ -592,7 +592,7 @@ footer img{
         padding: 20px;
     }
     header.scrolled{
-        padding: 32px 20px;
+        padding: 20px;
     }
     header .headerBox{
         flex-direction: column;
@@ -608,14 +608,14 @@ footer img{
         gap: 20px;
     }
     .artworks .visual{
-        height: 400px;
+        height: 320px;
         background-attachment: scroll;
     }
     .aboutMe.on{
         gap: 20px;
     }
     .aboutMe .visual{
-        height: 400px;
+        height: 320px;
         background-attachment: scroll;
     }
     .secBox{
