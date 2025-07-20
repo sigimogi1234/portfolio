@@ -691,6 +691,9 @@ footer img{
     .aboutMe section .profileList ul li a{
         font-size: 16px;
     }
+    #scrollTopBtn {
+        display: none;
+    }
 }
 
 
