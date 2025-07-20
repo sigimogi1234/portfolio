@@ -1,0 +1,754 @@
+body{
+    background-color: #f8f8f8;
+}
+.korean, .english, .artworks, .aboutMe{
+    display: none;
+}
+.korean.on, .english.on{
+    display: block;
+}
+.conWrap{
+    padding: 0 20px;
+    padding-top: 135px;
+}
+
+
+
+
+
+
+
+header{
+    width: 100%;
+    padding: 32px 20px;
+    position: fixed;
+    z-index: 999;
+    transition: all 0.3s;
+}
+header.scrolled{
+    padding: 32px 60px;
+}
+header .headerBox{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #e8e8e8;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+    border-radius: 24px;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    transition: all 0.3s;
+}
+header.scrolled .headerBox{
+    max-width: 1120px;
+    background-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+header .headerBox h1 a img{
+    display: block;
+}
+header .headerBox .gnbWrap{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+header .headerBox .gnbWrap .gnb{
+    display: flex;
+    gap: 8px;
+}
+header .headerBox .gnbWrap .gnb li{
+    padding: 4px;
+    color: #777;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    transition: all 0.3s;
+}
+header .headerBox .gnbWrap .gnb li:hover{
+    color: #292929;
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+header .headerBox .gnbWrap .gnb li.on{
+    color: #292929;
+    text-decoration: underline;
+}
+header .headerBox .gnbWrap .lang{
+    display: flex;
+    border-radius: 24px;
+    background-color: #292929;
+}
+header .headerBox .gnbWrap .lang p{
+    color: #aaa;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.3s;
+}
+header .headerBox .gnbWrap .lang p:first-child{
+    padding: 6px 4px 6px 12px;
+}
+header .headerBox .gnbWrap .lang p:last-child{
+    padding: 6px 12px 6px 4px;
+}
+header .headerBox .gnbWrap .lang p:hover{
+    color: #fff;
+    transition: all 0.3s;
+}
+header .headerBox .gnbWrap .lang p.on{
+    color: #fff;
+}
+
+
+
+
+
+
+
+.artworks.on{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.artworks .visual{
+    width: 100%;
+    height: 400px;
+    background: url(img/bg_artworks.png) no-repeat center/cover;
+    background-attachment: fixed;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    transition: all 0.3s;
+}
+.artworks .visual:hover{
+    background-size: 105%;
+}
+
+
+
+
+
+
+.aboutMe.on{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.aboutMe .visual{
+    width: 100%;
+    height: 400px;
+    background: url(img/bg_about.png) no-repeat center/cover;
+    background-size: 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    transition: all 0.3s;
+}
+.aboutMe .visual:hover{
+    background-size: 105%;
+}
+
+
+
+
+
+.visual .visPc{
+    display: block;
+}
+.visual .visM{
+    display: none;
+}
+
+
+
+
+
+
+.secBox{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.secBox .secTitleWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    transition: all 0.8s;
+}
+.secBox .secTitleWrap.on{
+    margin-bottom: 24px;
+    transition: all 0.3s;
+}
+.secBox .secTitleWrap .secTitle{
+    font-size: 20px;
+    font-weight: 300;
+    color: #292929;
+}
+.secBox .secTitleWrap img{
+    transition: all 0.3s;
+}
+.secBox .secTitleWrap.on img{
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+.artworks section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.artworks section .secFigWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.artworks section .secFigWrap .secFig{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 40px 0 40px;
+    background-color: #f8f8f8;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+.artworks section .secFigWrap .secFig:hover{
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.artworks section .secFigWrap .secFig .secFigTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.artworks section .secFigWrap .secFig .secFigTitle h4{
+    font-size: 24px;
+    font-weight: 500;
+    color: #292929;
+}
+.artworks section .secFigWrap .secFig .secFigTitle p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+}
+.artworks section .secFigWrap .secFig .secFigImg{
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    width: 100%;
+    height: 18vw;
+    max-height: 240px;
+}
+.artworks section .secFigWrap .secFig .secFigImg img{
+    display: block;
+    width: 100%;
+    height: 18vw;
+    max-height: 240px;
+    object-fit: cover;
+}
+.artworks section .secFigWrap .viewBtnWrap{
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+.artworks section .secFigWrap .viewBtnWrap .viewBtn{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 24px;
+    background-color: #f8f8f8;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.artworks section .secFigWrap .viewBtnWrap .viewBtn svg{
+    width: 14px;
+    height: 14px;
+}
+.artworks section .secFigWrap .viewBtnWrap .viewBtn:hover{
+    background-color: #494949;
+}
+.artworks section .secFigWrap .viewBtnWrap .viewBtn p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #494949;
+}
+.artworks section .secFigWrap .viewBtnWrap .viewBtn:hover p{
+    color: #fff;
+}
+.artworks section .secFigWrap .viewBtnWrap .viewBtn:hover svg path{
+    stroke: #fff;
+}
+
+
+
+
+
+
+.aboutMe section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.aboutMe section .workList{
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    padding: 24px 40px;
+    transition: all 0.3s;
+}
+.aboutMe section .workList:hover{
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.aboutMe section .workList .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.aboutMe section .workList .title h4{
+    font-size: 20px;
+    font-weight: 500;
+    color: #292929;
+}
+.aboutMe section .workList .title p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+}
+.aboutMe section .workList .info{
+    display: flex;
+    gap: 24px;
+}
+.aboutMe section .workList .info div{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.aboutMe section .workList .info div img{
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.aboutMe section .workList .info div p{
+    font-size: 14px;
+    font-weight: 300;
+    color: #888;
+    position: relative;
+}
+.aboutMe section .workList .info div p::after{
+    content: "l";
+    font-weight: 100;
+    position: absolute;
+    top: 0;
+    right: -12px;
+}
+.aboutMe section .workList .info div:last-child p::after{
+    content: "";
+}
+.aboutMe section .workList .desc{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.aboutMe section .workList .desc li{
+    font-size: 16px;
+    font-weight: 300;
+    color: #494949;
+    margin-left: 12px;
+    position: relative;
+}
+.aboutMe section .workList .desc li::before{
+    content: "-";
+    position: absolute;
+    left: -12px;
+}
+
+
+
+.aboutMe .skills section{
+    grid-template-columns: repeat(1, 1fr);
+}
+.aboutMe section .skillList{
+    background-color: #f8f8f8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    padding: 40px;
+    transition: all 0.3s;
+}
+.aboutMe section .skillList:hover{
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.aboutMe section .skillList ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.aboutMe section .skillList ul{
+    width: 100%;
+    align-items: flex-start;
+}
+.aboutMe section .skillList ul .dark{
+    font-size: 20px;
+    font-weight: 300;
+    color: #292929;
+}
+.aboutMe section .skillList ul .gage{
+    width: 100%;
+    height: 4px;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+}
+.aboutMe section .skillList ul .gage::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #494949;
+    border-radius: 8px;
+    border: 4px solid #f8f8f8;
+    box-sizing: content-box;
+    margin-top: -4px;
+    margin-left: -4px;
+}
+.aboutMe section .skillList ul .gage1::after{
+    width: 100%;
+}
+.aboutMe section .skillList ul .gage2::after{
+    width: 90%;
+}
+.aboutMe section .skillList ul .gage3::after{
+    width: 90%;
+}
+.aboutMe section .skillList ul .gage4::after{
+    width: 80%;
+}
+.aboutMe section .skillList ul .gage5::after{
+    width: 80%;
+}
+.aboutMe section .skillList ul .gage6::after{
+    width: 50%;
+}
+.aboutMe section .skillList ul .gage7::after{
+    width: 100%;
+}
+.aboutMe section .skillList ul .gage8::after{
+    width: 40%;
+}
+
+
+
+
+
+.aboutMe .profile section{
+    grid-template-columns: repeat(1, 1fr);
+}
+.aboutMe section .profileList{
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    padding: 40px;
+    transition: all 0.3s;
+}
+.aboutMe section .profileList:hover{
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.aboutMe section .profileList ul{
+    display: flex;
+    gap: 12px;
+}
+.aboutMe section .profileList ul .light{
+    font-size: 20px;
+    font-weight: 300;
+    color: #888;
+}
+.aboutMe section .profileList ul .dark{
+    font-size: 20px;
+    font-weight: 300;
+    color: #292929;
+}
+.aboutMe section .profileList ul li a{
+    font-size: 20px;
+    font-weight: 300;
+    color: #292929;
+    text-decoration: underline;
+}
+
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    opacity: 0.2;
+}
+footer img{
+    width: 200px;
+}
+
+
+
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    width: 56px;
+    height: 56px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); 
+    background-color: rgba(230, 230, 230, 0.24);
+    border-radius: 40px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+#scrollTopBtn:hover{
+    background-color: #494949;
+}
+#scrollTopBtn:hover svg path{
+    stroke: #fff;
+}
+
+
+
+
+
+
+@media (max-width: 920px) {
+    .artworks section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .artworks section .secFigWrap .secFig .secFigImg{
+        height: 30vw;
+        max-height: 240px;
+    }
+    .artworks section .secFigWrap .secFig .secFigImg img{
+        height: 30vw;
+        max-height: 240px;
+    }
+    .aboutMe section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .aboutMe section .skillList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    .conWrap{
+        padding-top: 139px;
+    }
+    header{
+        padding: 20px;
+    }
+    header.scrolled{
+        padding: 32px 44px;
+    }
+    header .headerBox{
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    header .headerBox .gnbWrap{
+        justify-content: space-between;
+        width: 100%;
+        gap: 0;
+    }
+    .artworks.on{
+        gap: 20px;
+    }
+    .artworks .visual{
+        height: 400px;
+        background-attachment: scroll;
+    }
+    .aboutMe.on{
+        gap: 20px;
+    }
+    .aboutMe .visual{
+        height: 400px;
+        background-attachment: scroll;
+    }
+    .secBox{
+        padding: 24px;
+    }
+    .secBox .secTitleWrap .secTitle{
+        font-size: 18px;
+    }
+    .artworks section .secFigWrap .secFig{
+        gap: 20px;
+        padding: 20px 24px 0 24px;
+    }
+    .artworks section .secFigWrap .secFig .secFigTitle h4{
+        font-size: 18px;
+    }
+    .artworks section .secFigWrap .secFig .secFigTitle p{
+        font-size: 14px;
+    }
+    .artworks section .secFigWrap .viewBtnWrap .viewBtn{
+        gap: 4px;
+    }
+    .artworks section .secFigWrap .viewBtnWrap .viewBtn p{
+        font-size: 14px;
+    }
+    .artworks section .secFigWrap .viewBtnWrap .viewBtn svg{
+        width: 10px;
+        height: 10px;
+    }
+    .aboutMe section .workList{
+        padding: 20px 24px;
+        gap: 12px;
+    }
+    .aboutMe section .workList .title h4{
+        font-size: 18px;
+    }
+    .aboutMe section .workList .info{
+        gap: 20px;
+    }
+    .aboutMe section .workList .info div{
+        gap: 2px;
+    }
+    .aboutMe section .workList .info div p::after{
+        right: -10px;
+    }
+    .aboutMe section .skillList{
+        padding: 20px 24px;
+        gap: 24px;
+    }
+    .aboutMe section .skillList ul .dark{
+        font-size: 16px;
+        font-weight: 300;
+        color: #292929;
+    }
+    .aboutMe section .skillList ul .gage{
+        height: 2px;
+    }
+    .aboutMe section .skillList ul .gage::after{
+        height: 2px;
+    }
+    .aboutMe section .profileList{
+        padding: 20px 24px;
+        gap: 16px;
+    }
+    .aboutMe section .profileList ul{
+        gap: 8px;
+    }
+    .aboutMe section .profileList ul .light{
+        font-size: 16px;
+    }
+    .aboutMe section .profileList ul .dark{
+        font-size: 16px;
+    }
+    .aboutMe section .profileList ul li a{
+        font-size: 16px;
+    }
+}
+
+
+
+
+@media (max-width: 639px){
+    .visual .visPc{
+        display: none;
+    }
+    .visual .visM{
+        display: block;
+    }
+}
+
+
+
+
+@media (max-width: 479px){
+    .aboutMe section .workList .info div img{
+        width: 12px;
+        height: 12px;
+    }
+    .aboutMe section .workList .info div p{
+        font-size: 12px;
+    }
+}
+
+
+
+
+@media (max-width: 399px) {
+    header .headerBox{
+        padding: 16px 24px;
+    }
+    header .headerBox h1 a img{
+        width: 200px;
+    }
+    .artworks section .secFigWrap .viewBtnWrap .viewBtn{
+        gap: 4px;
+        padding: 6px 12px;
+    }
+    .aboutMe section .workList .title{
+        flex-direction: column;
+        gap: 4px;
+    }
+    .aboutMe section .workList .info div img{
+        display: none;
+    }
+    .aboutMe section .profileList{
+        gap: 24px;
+    }
+    .aboutMe section .profileList ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+    .aboutMe section .profileList ul .light{
+        font-size: 14px;
+    }
+}
