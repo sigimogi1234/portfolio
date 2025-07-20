@@ -592,7 +592,7 @@ footer img{
         padding: 20px;
     }
     header.scrolled{
-        padding: 32px 44px;
+        padding: 32px 20px;
     }
     header .headerBox{
         flex-direction: column;
