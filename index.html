@@ -6,20 +6,22 @@
     <title>Portfolio_JunhaLee</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="resrt.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down">
         <div class="headerBox">
             <h1>
                 <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
             </h1>
             <div class="gnbWrap">
                 <ul class="gnb">
-                    <li class="on">Artworks</li>
-                    <li>Profile</li>
+                    <li class="gnbArtworks">Artworks</li>
+                    <li class="gnbAboutMe">Profile</li>
                 </ul>
                 <div class="lang">
                     <p class="on">Ko</p>
@@ -29,12 +31,26 @@
         </div>
     </header>
 
-    <div class="korean conWrap on">
-        <div class="artworks on">
+    <div class="chooseWrap on">
+        <div class="chooseBtn">
+            <div class="visual artworkChoose" data-aos="fade-right">
+                <h2>
+                    ARTWORKS
+                </h2>
+            </div>
+            <div class="visual aboutMeChoose" data-aos="fade-left">
+                <h2>
+                    PROFILE
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="korean conWrap">
+        <div class="artworks">
             <div class="visual">
                 <h2>
-                    <img class="visPc" src="img/ARTWORKS.svg" alt="">
-                    <img class="visM" src="img/ARTWORKS_m.svg" alt="">
+                    ARTWORKS
                 </h2>
             </div>
 
@@ -316,8 +332,7 @@
         <div class="aboutMe">
             <div class="visual">
                 <h2>
-                    <img class="visPc" src="img/PROFILE.svg" alt="">
-                    <img class="visM" src="img/PROFILE_m.svg" alt="">
+                    PROFILE
                 </h2>
             </div>
 
@@ -331,7 +346,7 @@
                     <div class="workList">
                         <div class="title">
                             <h4>LS 컴퍼니</h4>
-                            <p>2022.12 ~ 2024.04</p>
+                            <p>2022.12 ~ 2024.04<br>17개월</p>
                         </div>
                         <div class="info">
                             <div class="place">
@@ -357,7 +372,7 @@
                     <div class="workList">
                         <div class="title">
                             <h4>CU 스튜디오</h4>
-                            <p>2021.11 ~ 2022.04</p>
+                            <p>2021.11 ~ 2022.04<br>6개월</p>
                         </div>
                         <div class="info">
                             <div class="place">
@@ -383,7 +398,7 @@
                     <div class="workList">
                         <div class="title">
                             <h4>모비두</h4>
-                            <p>2019.12 ~ 2021.06</p>
+                            <p>2019.12 ~ 2021.06<br>19개월</p>
                         </div>
                         <div class="info">
                             <div class="place">
@@ -465,14 +480,14 @@
                             <li class="dark">이준하</li>
                         </ul>
                         <ul>
-                            <li class="light">나이</li>
+                            <li class="light">생년월일</li>
                             <li class="dark">1996.01.17</li>
                         </ul>
                         <ul>
                             <li class="light">전화번호</li>
                             <li class="dark">
-                                <a href="tel: +8210-4557-5074">
-                                    +8210-4557-5074
+                                <a href="tel: +82 10-4557-5074">
+                                    +82 10-4557-5074
                                 </a>
                             </li>
                         </ul>
@@ -491,11 +506,10 @@
     </div>
 
     <div class="english conWrap">
-        <div class="artworks on">
+        <div class="artworks">
             <div class="visual">
                 <h2>
-                    <img class="visPc" src="img/ARTWORKS.svg" alt="">
-                    <img class="visM" src="img/ARTWORKS_m.svg" alt="">
+                    ARTWORKS
                 </h2>
             </div>
 
@@ -777,8 +791,7 @@
         <div class="aboutMe">
             <div class="visual">
                 <h2>
-                    <img class="visPc" src="img/PROFILE.svg" alt="">
-                    <img class="visM" src="img/PROFILE_m.svg" alt="">
+                    PROFILE
                 </h2>
             </div>
 
@@ -792,7 +805,7 @@
                     <div class="workList">
                         <div class="title">
                             <h4>LS Company</h4>
-                            <p>12.2022 ~ 04.2024</p>
+                            <p>12.2022 ~ 04.2024<br>17month</p>
                         </div>
                         <div class="info">
                             <div class="place">
@@ -818,7 +831,7 @@
                     <div class="workList">
                         <div class="title">
                             <h4>CU Studio</h4>
-                            <p>11.2021 ~ 04.2022</p>
+                            <p>11.2021 ~ 04.2022<br>6month</p>
                         </div>
                         <div class="info">
                             <div class="place">
@@ -844,7 +857,7 @@
                     <div class="workList">
                         <div class="title">
                             <h4>Mobidoo</h4>
-                            <p>12.2019 ~ 06.2021</p>
+                            <p>12.2019 ~ 06.2021<br>19month</p>
                         </div>
                         <div class="info">
                             <div class="place">
@@ -926,14 +939,14 @@
                             <li class="dark">Junha Lee</li>
                         </ul>
                         <ul>
-                            <li class="light">D.O.B.</li>
+                            <li class="light">Date Of Birth</li>
                             <li class="dark">17.01.1996</li>
                         </ul>
                         <ul>
                             <li class="light">Phone</li>
                             <li class="dark">
-                                <a href="tel: +8210-4557-5074">
-                                    +8210-4557-5074
+                                <a href="tel: +82 10-4557-5074">
+                                    +82 10-4557-5074
                                 </a>
                             </li>
                         </ul>
@@ -992,5 +1005,9 @@
             <path d="M1 9L9 1M9 1L17 9M9 1V17" stroke="#494949" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
     </button>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

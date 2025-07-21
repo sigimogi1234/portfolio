@@ -65,14 +65,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const koreanDiv = document.querySelector('.korean');
   const englishDiv = document.querySelector('.english');
 
-  // === 초기 메뉴, 언어 버튼에 on 클래스 적용 ===
-  gnbItems.forEach(item => {
-    if (item.textContent.trim() === currentSection) {
-      item.classList.add('on');
+  // 선택 화면 요소
+  const chooseWrap = document.querySelector('.chooseWrap');
+  const artworkChoose = document.querySelector('.artworkChoose');
+  const aboutMeChoose = document.querySelector('.aboutMeChoose');
+
+  // gnb li on/off 제어 함수
+  function updateGnbActiveState() {
+    if (chooseWrap && chooseWrap.classList.contains('on')) {
+      gnbItems.forEach(item => item.classList.remove('on'));
     } else {
-      item.classList.remove('on');
+      gnbItems.forEach(item => {
+        let itemText = item.textContent.trim();
+        if (itemText === 'Profile') itemText = 'About Me';
+
+        if (itemText === currentSection) {
+          item.classList.add('on');
+        } else {
+          item.classList.remove('on');
+        }
+      });
     }
-  });
+  }
+
+  // === 초기 선택화면 처리 ===
+  if (chooseWrap) {
+    // 선택 화면이 보이는 동안 스크롤 막기
+    document.body.classList.add('lockScroll');
+
+    artworkChoose.addEventListener('click', () => {
+      chooseWrap.classList.remove('on');
+      document.body.classList.remove('lockScroll');
+
+      currentSection = 'Artworks';
+      localStorage.setItem('section', currentSection);
+
+      updateVisibleSection();
+      updateGnbActiveState();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    aboutMeChoose.addEventListener('click', () => {
+      chooseWrap.classList.remove('on');
+      document.body.classList.remove('lockScroll');
+
+      currentSection = 'About Me';
+      localStorage.setItem('section', currentSection);
+
+      updateVisibleSection();
+      updateGnbActiveState();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // === 초기 메뉴, 언어 버튼에 on 클래스 적용 ===
+  updateGnbActiveState();
 
   langButtons.forEach(btn => {
     if (btn.textContent.trim() === currentLang) {
@@ -88,12 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
       gnbItems.forEach(i => i.classList.remove('on'));
       item.classList.add('on');
 
-      currentSection = item.textContent.trim();
-      localStorage.setItem('section', currentSection); // 저장
+      let selectedText = item.textContent.trim();
+      if (selectedText === 'Profile') selectedText = 'About Me';
+      currentSection = selectedText;
+      localStorage.setItem('section', currentSection);
+
+      if (chooseWrap && chooseWrap.classList.contains('on')) {
+        chooseWrap.classList.remove('on');
+        document.body.classList.remove('lockScroll');
+      }
 
       updateVisibleSection();
+      updateGnbActiveState();
 
-      // 👇 페이지 맨 위로 스크롤
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
@@ -105,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('on');
 
       currentLang = btn.textContent.trim();
-      localStorage.setItem('lang', currentLang); // 저장
+      localStorage.setItem('lang', currentLang);
 
       if (currentLang === 'Ko') {
         koreanDiv.classList.add('on');
@@ -115,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         koreanDiv.classList.remove('on');
       }
 
-      updateVisibleSection(); // 현재 섹션 유지
+      updateVisibleSection();
     });
   });
 
@@ -147,6 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // === 섹션 표시 초기화 ===
   updateVisibleSection();
 });
+
+
+
 
 
 
