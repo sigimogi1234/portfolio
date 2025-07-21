@@ -94,6 +94,9 @@ header .headerBox .gnbWrap .lang{
     border-radius: 24px;
     background-color: #292929;
 }
+header .headerBox .gnbWrap .lang.hide{
+    display: none;
+}
 header .headerBox .gnbWrap .lang p{
     color: #aaa;
     cursor: pointer;

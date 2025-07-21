@@ -70,10 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const artworkChoose = document.querySelector('.artworkChoose');
   const aboutMeChoose = document.querySelector('.aboutMeChoose');
 
-  // gnb li on/off 제어 함수
+  // === gnb li on/off 및 언어 숨김 제어 함수 ===
   function updateGnbActiveState() {
+    const langWrap = document.querySelector('.gnbWrap .lang');
+
     if (chooseWrap && chooseWrap.classList.contains('on')) {
       gnbItems.forEach(item => item.classList.remove('on'));
+      if (langWrap) langWrap.classList.add('hide'); // 언어 숨기기
     } else {
       gnbItems.forEach(item => {
         let itemText = item.textContent.trim();
@@ -85,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
           item.classList.remove('on');
         }
       });
+      if (langWrap) langWrap.classList.remove('hide'); // 언어 보이기
     }
   }
 
@@ -203,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // === 섹션 표시 초기화 ===
   updateVisibleSection();
 });
+
 
 
 
