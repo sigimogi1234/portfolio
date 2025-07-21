@@ -697,9 +697,9 @@ footer img{
         background-attachment: scroll;
     }
     .visual h2{
-        font-size: 32px;
-        letter-spacing: 28px;
-        margin-right: -28px;
+        font-size: 40px;
+        letter-spacing: 16px;
+        margin-right: -16px;
     }
     .secBox{
         padding: 24px;
@@ -786,9 +786,9 @@ footer img{
 
 @media (max-width: 479px){
     .visual h2{
-        font-size: 32px;
-        letter-spacing: 16px;
-        margin-right: -16px;
+        font-size: 40px;
+        letter-spacing: 12px;
+        margin-right: -12px;
     }
     .aboutMe section .workList .info div img{
         width: 12px;
