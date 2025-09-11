@@ -124,11 +124,10 @@ header .headerBox .gnbWrap .lang p.on{
 .chooseWrap{
     display: none;
     justify-content: center;
+    position: fixed;
     width: 100%;
-    height: calc(100vh - 94px);
-    padding: 0 20px;
-    padding-top: 135px;
-    margin-bottom: 94px;
+    height: 100vh;
+    padding: 133px 20px 32px;
     background-color: #f8f8f8;
 }
 .chooseWrap.on{
@@ -144,8 +143,6 @@ header .headerBox .gnbWrap .lang p.on{
     width: 100%;
     height: 100%;
     background: url(img/bg_artworks.png) no-repeat center/cover;
-    background-attachment: fixed;
-    background-size: 120%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,15 +152,12 @@ header .headerBox .gnbWrap .lang p.on{
     cursor: pointer;
 }
 .chooseWrap .artworkChoose:hover{
-    background-size: 130%;
     filter: grayscale(0);
 }
 .chooseWrap .aboutMeChoose{
     width: 100%;
     height: 100%;
     background: url(img/bg_about.png) no-repeat center/cover;
-    background-attachment: fixed;
-    background-size: 120%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +167,6 @@ header .headerBox .gnbWrap .lang p.on{
     cursor: pointer;
 }
 .chooseWrap .aboutMeChoose:hover{
-    background-size: 130%;
     filter: grayscale(0);
 }
 .chooseWrap .visual h2{
@@ -680,7 +673,7 @@ footer img{
         gap: 0;
     }
     .chooseWrap{
-        padding-top: 135px;
+        padding: 137px 20px 20px;
     }
     .chooseWrap .chooseBtn{
         flex-direction: column;
@@ -821,7 +814,7 @@ footer img{
         margin-right: -12px;
     }
     .chooseWrap{
-        padding-top: 129px;
+        padding: 127px 20px 20px;
     }
     .chooseWrap .visual h2{
         font-size: 28px;
