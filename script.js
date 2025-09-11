@@ -1,3 +1,17 @@
+function setVhProperty() {
+  const vh = window.innerHeight * 0.01; // 화면 높이의 1%
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// 초기 호출
+setVhProperty();
+
+// 화면 크기 변경 시 다시 계산
+window.addEventListener('resize', setVhProperty);
+
+
+
+
 // 헤더영역, 스크롤탑 버튼
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
