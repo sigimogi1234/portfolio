@@ -1,13 +1,16 @@
-function setVhProperty() {
-  const vh = window.innerHeight * 0.01; // 화면 높이의 1%
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  function setVhProperty() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-// 초기 호출
-setVhProperty();
+    // 여기서 값 확인
+    console.log(getComputedStyle(document.documentElement).getPropertyValue('--vh'));
+  }
 
-// 화면 크기 변경 시 다시 계산
-window.addEventListener('resize', setVhProperty);
+
+  setVhProperty();
+  window.addEventListener('resize', setVhProperty);
+});
 
 
 
