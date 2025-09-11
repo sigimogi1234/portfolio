@@ -127,15 +127,17 @@ header .headerBox .gnbWrap .lang p.on{
     position: fixed;
     width: 100%;
     height: 100vh;
-    padding: 133px 20px 32px;
+    padding: 133px 20px 0;
     background-color: #f8f8f8;
 }
 .chooseWrap.on{
     display: flex;
+    flex-direction: column;
 }
 .chooseWrap .chooseBtn{
     width: 100%;
     max-width: 1200px;
+    height: 100%;
     display: flex;
     gap: 16px;
 }
@@ -175,6 +177,16 @@ header .headerBox .gnbWrap .lang p.on{
     letter-spacing: 12px;
     color: #fff;
     margin-right: -12px;
+}
+.chooseWrap .footerImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    opacity: 0.2;
+}
+.chooseWrap .footerImg img{
+    width: 208px;
 }
 
 
@@ -630,6 +642,9 @@ footer img{
 
 
 @media (max-width: 920px) {
+    .chooseWrap .chooseBtn{
+        flex-direction: column;
+    }
     .artworks section {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -673,10 +688,7 @@ footer img{
         gap: 0;
     }
     .chooseWrap{
-        padding: 137px 20px 20px;
-    }
-    .chooseWrap .chooseBtn{
-        flex-direction: column;
+        padding: 137px 20px 0;
     }
     .artworks.on{
         gap: 20px;
@@ -814,7 +826,7 @@ footer img{
         margin-right: -12px;
     }
     .chooseWrap{
-        padding: 127px 20px 20px;
+        padding: 127px 20px 0;
     }
     .chooseWrap .visual h2{
         font-size: 28px;
