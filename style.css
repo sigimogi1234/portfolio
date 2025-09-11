@@ -133,6 +133,7 @@ header .headerBox .gnbWrap .lang p.on{
 .chooseWrap.on{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .chooseWrap .chooseBtn{
     width: 100%;
@@ -180,6 +181,7 @@ header .headerBox .gnbWrap .lang p.on{
 }
 .chooseWrap .footerImg{
     width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     padding: 40px 0;
